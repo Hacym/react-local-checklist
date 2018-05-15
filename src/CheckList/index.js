@@ -7,10 +7,6 @@ class CheckList extends Component {
     constructor(props) {
         super(props)
 
-        // Default items for testing
-        localStorage.setItem("todo", '["Test Item", "Test Item 2"]');
-        localStorage.setItem("completed", '[]');
-
         this.state = {
             todo: JSON.parse(localStorage.getItem("todo")) || [],
             completed: JSON.parse(localStorage.getItem("completed")) || []
