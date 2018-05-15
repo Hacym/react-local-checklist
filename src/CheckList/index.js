@@ -59,6 +59,10 @@ class CheckList extends Component {
             )
         }
 
+        if (todo_items.length == 0) {
+            todo_items = "You have nothing to do!"
+        }
+
         let completed_items = [];
 
         for (let i = 0; i < this.state.completed.length; i++) {
@@ -67,6 +71,10 @@ class CheckList extends Component {
                     { this.state.completed[i] }
                 </li>
             )
+        }
+
+        if (completed_items.length == 0) {
+            completed_items = "You've done nothing!"
         }
 
         return (
