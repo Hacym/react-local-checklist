@@ -35,14 +35,14 @@ class CheckList extends Component {
         }
 
         localStorage.setItem("completed", JSON.stringify(this.state.completed))
-        localStorage.setItem("todo", JSON.stringify(this.state.completed))
+        localStorage.setItem("todo", JSON.stringify(this.state.todo))
         this.setState(this.state)
     }
 
     addedItem() {
         this.setState({
             todo: JSON.parse(localStorage.getItem("todo")) || [],
-            completed: JSON.parse(localStorage.getItem("completed")) || []
+            completed: JSON.parse(localStorage.getItem("completed")) || [],
         })
     }
 

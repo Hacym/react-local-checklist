@@ -19,6 +19,10 @@ class AddItem extends Component {
         localStorage.setItem("todo", JSON.stringify(localTodo))
 
         this.props.addedItemHandler()
+
+        this.setState({
+                item: ""
+        })
     }
 
     handleChange(event) {
