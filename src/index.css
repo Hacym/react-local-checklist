@@ -4,6 +4,7 @@ body {
 
 .todo-item, .completed-item {
   cursor: pointer;
+  max-width: 400px;
 }
 
 .todo-item:hover {

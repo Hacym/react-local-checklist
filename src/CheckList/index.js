@@ -53,7 +53,7 @@ class CheckList extends Component {
         for (let i = 0; i < this.state.todo.length; i++) {
             todo_items.push(
                 <div className="level is-mobile" key={i}>
-                    <div className="level-left todo-item" onClick={() => this.changeState(i, "completed") }>{ this.state.todo[i] }</div>
+                    <div className="level-left todo-item" onClick={() => this.changeState(i, "completed") }><p>{ this.state.todo[i] }</p></div>
                     <div className="level-right delete" onClick={() => this.deleteItem(i) }><i className="far fa-trash-alt"></i></div>
                 </div>
             )
