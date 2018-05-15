@@ -42,13 +42,20 @@ class CheckList extends Component {
         })
     }
 
+    deleteItem(position) {
+        this.state.todo.splice(position, 1)
+        localStorage.setItem("todo", JSON.stringify(this.state.todo))
+        this.setState(this.state)
+    }
+
     render() {
         let todo_items = [];
         for (let i = 0; i < this.state.todo.length; i++) {
             todo_items.push(
-                <li className="todo-item" key={i} onClick={() => this.changeState(i, "completed") }>
-                    { this.state.todo[i] }
-                </li>
+                <div className="level is-mobile" key={i}>
+                    <div className="level-left todo-item" onClick={() => this.changeState(i, "completed") }>{ this.state.todo[i] }</div>
+                    <div className="level-right delete" onClick={() => this.deleteItem(i) }><i className="far fa-trash-alt"></i></div>
+                </div>
             )
         }
 

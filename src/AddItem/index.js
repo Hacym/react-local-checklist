@@ -13,16 +13,18 @@ class AddItem extends Component {
     }
 
     addItem(item) {
-        let localTodo = JSON.parse(localStorage.getItem("todo")) || []
+        if(item) {
+            let localTodo = JSON.parse(localStorage.getItem("todo")) || []
 
-        localTodo.push(item)
-        localStorage.setItem("todo", JSON.stringify(localTodo))
+            localTodo.push(item)
+            localStorage.setItem("todo", JSON.stringify(localTodo))
 
-        this.props.addedItemHandler()
+            this.props.addedItemHandler()
 
-        this.setState({
-                item: ""
-        })
+            this.setState({
+                    item: ""
+            })
+        }
     }
 
     handleChange(event) {
