@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+}
+
+.todo-item, .completed-item {
+  cursor: pointer;
+}
+
+.todo-item:hover {
+  text-decoration: line-through;
+}
